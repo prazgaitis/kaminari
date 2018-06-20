@@ -37,6 +37,12 @@ module Kaminari
      else
        c
       end
+
+      if column_name.nil?
+        @total_count = c.count
+      end
+
+      @total_count
     end
 
     # Turn this Relation to a "without count mode" Relation.
